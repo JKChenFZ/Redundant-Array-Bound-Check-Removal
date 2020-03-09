@@ -1,0 +1,4 @@
+#Prep these for opt
+
+1. clang -S -emit-llvm -O -Xclang -disable-llvm-passes pre-ssa-dummy.ll
+2. opt -mem2reg pre-ssa-dummy.ll -S -o dummy.ll
